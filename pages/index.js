@@ -1,6 +1,5 @@
 import { Container, Box, Heading, Button, extendTheme, ColorModeScript, useColorMode } from "@chakra-ui/react"
-import Theme from './Theme'
-
+import Theme from './theme'
 function Example() {
     const { colorMode, toggleColorMode } = useColorMode()
     return (
