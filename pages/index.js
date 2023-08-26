@@ -1,5 +1,12 @@
 import { Container, Box, Heading, Button, extendTheme, ColorModeScript, useColorMode } from "@chakra-ui/react"
-import Theme from './theme'
+
+const config = {
+    initialColorMode: "system",
+    useSystemColorMode: false,
+}
+
+const Theme = extendTheme({ config })
+
 function Example() {
     const { colorMode, toggleColorMode } = useColorMode()
     return (
