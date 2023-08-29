@@ -15,6 +15,8 @@ import {
     useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import { forwardRef } from 'react'
+import ThemeToggleButton from './layouts/theme-toggle-button'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
     const active = path === href
@@ -34,6 +36,9 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
         </Link>
     )
 }
+const MenuLink = forwardRef((props, ref) => (
+    <Link ref={ref} as={NextLink} {...props}/>
+))
 
 const Navbar = (props) => {
     const { path } = props
@@ -46,16 +51,34 @@ const Navbar = (props) => {
                     </Heading>
                 </Flex>
                 <Stack direction={{ base: 'column', md: 'row' }} display={{ base: 'none', md: 'flex' }} width={{ base: 'full', md: 'auto' }} alignItems="center" flexGrow={1} mt={{ base: 4, md: 0 }}>
-                    <LinkItem href="/works" path={path}>
+                    <LinkItem href="/works" path={path} passHref>
                         Works
                     </LinkItem>
-                    <LinkItem href="/about" path={path}>
+                    <LinkItem href="/about" path={path} passHref>
                         About
                     </LinkItem>
-                    <LinkItem href="/contact" path={path}>
+                    <LinkItem href="/contact" path={path} passHref>
                         Contact
                     </LinkItem>
+                    <LinkItem href="/posts" path={path} passHref>
+                        Posts
+                    </LinkItem>
                 </Stack>
+
+                <Box flex={1} align="right">
+                    <ThemeToggleButton />
+                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+                        <Menu>
+                            <MenuButton as={IconButton} icon={<HamburgerIcon/>} variant="outline" aria-label='Options'/>
+                            <MenuList>
+                                <MenuItem as={MenuLink} href="/"> About </MenuItem>
+                                <MenuItem as={MenuLink} href="/work"> About </MenuItem>
+                                <MenuItem as={MenuLink} href="/contact"> About </MenuItem>
+                                <MenuItem as={MenuLink} href="/posts"> About </MenuItem>
+                            </MenuList>
+                        </Menu>
+                    </Box>
+                </Box>
             </Container>
         </Box>
 
