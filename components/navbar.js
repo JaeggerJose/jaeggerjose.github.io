@@ -51,7 +51,7 @@ const Navbar = (props) => {
                     </Heading>
                 </Flex>
                 <Stack direction={{ base: 'column', md: 'row' }} display={{ base: 'none', md: 'flex' }} width={{ base: 'full', md: 'auto' }} alignItems="center" flexGrow={1} mt={{ base: 4, md: 0 }}>
-                    <LinkItem href="/works" path={path} passHref>
+                    <LinkItem href="/works" path={path} >
                         Works
                     </LinkItem>
                     <LinkItem href="/about" path={path} passHref>
@@ -72,7 +72,7 @@ const Navbar = (props) => {
                             <MenuButton as={IconButton} icon={<HamburgerIcon/>} variant="outline" aria-label='Options'/>
                             <MenuList>
                                 <MenuItem as={MenuLink} href="/"> About </MenuItem>
-                                <MenuItem as={MenuLink} href="/work"> About </MenuItem>
+                                <MenuItem as={MenuLink} href="/works"> About </MenuItem>
                                 <MenuItem as={MenuLink} href="/contact"> About </MenuItem>
                                 <MenuItem as={MenuLink} href="/posts"> About </MenuItem>
                             </MenuList>
