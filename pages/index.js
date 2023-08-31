@@ -5,7 +5,6 @@ import Paragraph from "../components/paragraph" // import the paragraph componen
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import { BioSection, BioYear } from "../components/bio"
 const Page = () => {
-
     return (
         <Container>
             <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} aligin="center">
@@ -16,11 +15,11 @@ const Page = () => {
                     <Heading as="h2" variant="page-title">
                         JaggerJose
                     </Heading>
-                    <p>Digital Craftzman (Software Enginear)</p>
+                    <p>Software Engineer</p>
                 </Box>
                 <Box flexShrink={0} mt={{base: 4, md: 0}}
                 ml={{md: 6}} aligin='center'>
-                    <Image borderColor="whiteAplpah.800" borderWifth={2} borderStyle="soild" maxWidth="100px" display="inline-block" borderRadius="full" src="https://static.gltjp.com/glt/prd/data/directory/13000/12058/20210822_040633_9fd817d6_w1920.jpg" alt="Profile Image">
+                    <Image borderColor="whiteAplpah.800" borderWidth={2} borderStyle="soild" maxWidth="100px" display="inline-block" borderRadius="full" src="https://raw.githubusercontent.com/JaeggerJose/jaeggerjose.github.io/main/static/profile.jpeg" alt="Profile Image">
                     </Image> 
                 </Box>
             </Box>
@@ -51,7 +50,32 @@ const Page = () => {
                     <BioYear>2000</BioYear>
                     Born in Puli, Nantou, Taiwan
                 </BioSection>
+                <BioSection>
+                    <BioYear>2020</BioYear>
+                    Got TestDaf 3 4 3 4 in Germany, Dreden
+                </BioSection>
+                <BioSection>
+                    <BioYear>2022</BioYear>
+                    Start at 
+                    <NextLink href="https://praexisio.com.tw/">
+                        <Link> Praexisio Taiwan Inc.</Link>
+                    </NextLink> as a part time product engineer
+                </BioSection>
+                <BioSection>
+                    <BioYear>2023</BioYear>
+                    Start at <NextLink href="https://aic.cgu.edu.tw/"><Link> Chang Gung University AI center</Link></NextLink>as a part time software engineer
+                </BioSection>    
                 {/*once add a new bio insert a new Biosection at here under*/}
+            </Section>
+            <Section delay={0.4}>
+                <Heading as="h3" variant="section-title">
+                    Publications
+                </Heading>
+                <BioSection>
+                    <BioYear>2023</BioYear>
+                    Y. -Y. Chang, S. -T. Wong, E. O. Salawu, <span style={{fontWeight: "bold", color: "#ff63c3"}}>M. -H. Liao, </span> 
+                    J. -H. Hung and L. -W. Yang, "Full-privacy secured search engine empowered by efficient genome-mapping algorithms," in IEEE Journal of Biomedical and Health Informatics, doi: <NextLink href="https://ieeexplore.ieee.org/document/10198547"><Link>10.1109/JBHI.2023.3300885</Link></NextLink>
+                </BioSection>
             </Section>
         </Container>
     )
