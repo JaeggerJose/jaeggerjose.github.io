@@ -19,7 +19,7 @@ const Page = () => {
                 </Box>
                 <Box flexShrink={0} mt={{base: 4, md: 0}}
                 ml={{md: 6}} aligin='center'>
-                    <Image borderColor="whiteAplpah.800" borderWidth={2} borderStyle="soild" maxWidth="100px" display="inline-block" borderRadius="full" src="https://raw.githubusercontent.com/JaeggerJose/jaeggerjose.github.io/main/static/profile.jpeg" alt="Profile Image">
+                    <Image borderColor="whiteAplpah.800" borderWidth={2} borderStyle="soild" maxWidth="100px" display="inline-block" borderRadius="full" src="../../static/profile.jepg" alt="Profile Image">
                     </Image> 
                 </Box>
             </Box>
@@ -74,7 +74,8 @@ const Page = () => {
                 <BioSection>
                     <BioYear>2023</BioYear>
                     Y. -Y. Chang, S. -T. Wong, E. O. Salawu, <span style={{fontWeight: "bold", color: "#ff63c3"}}>M. -H. Liao, </span> 
-                    J. -H. Hung and L. -W. Yang, "Full-privacy secured search engine empowered by efficient genome-mapping algorithms," in IEEE Journal of Biomedical and Health Informatics, doi: <NextLink href="https://ieeexplore.ieee.org/document/10198547"><Link>10.1109/JBHI.2023.3300885</Link></NextLink>
+                    J. -H. Hung and L. -W. Yang, "Full-Privacy Secured Search Engine Empowered by Efficient Genome-Mapping Algorithms," 
+                    in IEEE Journal of Biomedical and Health Informatics, vol. 27, no. 10, pp. 5155-5164, Oct. 2023,  doi: <NextLink href="https://ieeexplore.ieee.org/document/10198547"><Link>10.1109/JBHI.2023.3300885</Link></NextLink>
                 </BioSection>
             </Section>
         </Container>
