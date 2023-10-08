@@ -12,14 +12,14 @@ const Page = () => {
             </Box>
             <Box display={{md : 'flex'}}>
                 <Box flexGrow={1}>
-                    <Heading as="h2" variant="page-title">
+                    <Heading as="H2" variant="page-title">
                         JaggerJose
                     </Heading>
                     <p>Software Engineer</p>
                 </Box>
                 <Box flexShrink={0} mt={{base: 4, md: 0}}
                 ml={{md: 6}} aligin='center'>
-                    <Image borderColor="whiteAplpah.800" borderWidth={2} borderStyle="soild" maxWidth="100px" display="inline-block" borderRadius="full" src="../../static/profile.jepg" alt="Profile Image">
+                    <Image borderColor="whiteAlpha.800" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="https://raw.githubusercontent.com/JaeggerJose/jaeggerjose.github.io/main/static/profile.jpeg" alt="Profile Image">
                     </Image> 
                 </Box>
             </Box>

@@ -28,7 +28,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
             scroll={false}
             p={2}
             bg={active ? 'grassTeal' : undefined}
-            color={active ? '#202023' : inactiveColor}
+            color={active ? '#032f39' : inactiveColor}
             target={target}
             {...props}
         >
@@ -43,7 +43,7 @@ const MenuLink = forwardRef((props, ref) => (
 const Navbar = (props) => {
     const { path } = props
     return (
-        <Box position="fixed" as="nav" w="100%" bg={useColorModeValue('#ffffff40', '#20202380')} style={{ backdropFilter: 'blur(10px)' }} zIndex={1} {...props}>
+        <Box position="fixed" as="nav" w="100%" bg={useColorModeValue('#ffffff', '#252525')} style={{ backdropFilter: 'blur(10px)' }} zIndex={1} {...props}>
             <Container display="flex" p={2} maxW="container.md" wrap="wrap" align="center" justify="space-between">
                 <Flex align="center" mr={5}>
                     <Heading as="h1" size="lg" letterSpacing={'tighter'}>

@@ -4,7 +4,9 @@ import { mode } from '@chakra-ui/theme-tools'
 const style = {
     global: props => ({
         body: {
-            bg: mode('#f0e7db', '#202023')(props)
+            color: mode('#000', '#fff')(props),
+            bg: mode('#dfc9b2', '#8ba2a3')(props),
+            transition: '0.2s'
         }
     })
 }
@@ -24,13 +26,13 @@ const components = {
     },
     Link: {
         baseStyle: props => ({
-            color: mode('#3d7aed', '#ff63c3')(props),
+            color: mode('#032f39s', '#ff63c3')(props),
             textUnderlineOffset: 3
         })
     }
 }
 const fonts = {
-    heading: "'M PLUS Pounded 1c'",
+    heading: "M PLUS Pounded 1c",
 }
 const colors = {
     glassTeal: '#88ccca'
@@ -45,7 +47,7 @@ const theme = extendTheme({
     style,
     components,
     colors,
-    fonts
+    fonts,
 })
 
 export default theme
