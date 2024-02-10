@@ -7,7 +7,6 @@ export default class Document extends NextDocument {
         return (
             <Html lang="en">
                 <Head>
-                    <!-- Google tag (gtag.js) -->
                     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0YQWYT632"></script>
                     <script>
                       window.dataLayer = window.dataLayer || [];
