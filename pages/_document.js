@@ -6,7 +6,17 @@ export default class Document extends NextDocument {
     render () {
         return (
             <Html lang="en">
-                <Head />
+                <Head>
+                    <!-- Google tag (gtag.js) -->
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0YQWYT632"></script>
+                    <script>
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                    
+                      gtag('config', 'G-N0YQWYT632');
+                    </script>
+                </Head>
                 <body>
                     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
                     <Main />
