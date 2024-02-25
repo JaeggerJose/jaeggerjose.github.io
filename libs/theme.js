@@ -38,7 +38,7 @@ const colors = {
     glassTeal: '#88ccca'
 }
 const config = {
-    initialColorMode: 'dark',
+    initialColorMode: 'light',
     useSystemColorMode: true
 }
 
