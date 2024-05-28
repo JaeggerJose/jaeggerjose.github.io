@@ -53,15 +53,13 @@ const Page = () => {
                     <BioYear>2000</BioYear>
                     Born in Puli, Nantou, Taiwan
                 </BioSection>
-
                 <BioSection>
                     <BioYear>2019</BioYear>
                     Graduated from St. Viator Catholic High School
                 </BioSection>
-
                 <BioSection>
                     <BioYear>2020</BioYear>
-                    Got TestDaf 3 4 3 4 in Germany, Dreden
+                    Got TestDaf 3 in Germany, Dresden (3, 4, 3, 4)
                 </BioSection>
 
                 <BioSection>
@@ -76,10 +74,9 @@ const Page = () => {
                     <BioYear>2023</BioYear>
                     Start at <NextLink href="https://aic.cgu.edu.tw/"><Link> CGU AI Center </Link></NextLink>as a part time software engineer
                 </BioSection>    
-
                 <BioSection>
                     <BioYear>2024</BioYear>
-                    Got IELTS 6.0 in Taiwan, Taipei
+                    Got IELTS 6.5 in Taiwan, Taipei (R: 6.5, L: 6.5, W: 6.5, S: 7.0)
                 </BioSection>
                 {/*once add a new bio insert a new Biosection at here under*/}
             </Section>
