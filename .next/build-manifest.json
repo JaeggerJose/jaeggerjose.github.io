@@ -32,6 +32,16 @@
       "static/chunks/main.js",
       "static/chunks/pages/about.js"
     ],
+    "/contact": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/contact.js"
+    ],
+    "/posts": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/posts.js"
+    ],
     "/works": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
