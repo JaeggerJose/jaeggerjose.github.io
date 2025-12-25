@@ -10,12 +10,12 @@ const Page = () => {
     return (
         <Container maxW="container.lg">
             <GoogleAnalytics gaId="G-N0YQWYT632" />
-            <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} aligin="center" marginTop={4}>
+            <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.300', 'whiteAlpha.100')} backdropFilter="blur(10px)" p={3} mb={6} align="center" marginTop={4}>
                 Hello, I&apos;m a full-stack developer in Taiwan!
             </Box>
             <Box display={{md : 'flex'}}>
                 <Box flexGrow={1}>
-                    <Heading as="H2" variant="page-title">
+                    <Heading as="h2" variant="page-title">
                         JaggerJose
                     </Heading>
                     <span>
@@ -23,8 +23,8 @@ const Page = () => {
                     </span>
                 </Box>
                 <Box flexShrink={0} mt={{base: 4, md: 0}}
-                ml={{md: 6}} aligin='center'>
-                    <Image borderColor="whiteAlpha.800" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="https://raw.githubusercontent.com/JaeggerJose/jaeggerjose.github.io/main/static/profile.jpeg" alt="Profile Image">
+                ml={{md: 6}} align='center'>
+                    <Image boxShadow="lg" maxWidth="150px" display="inline-block" borderRadius="full" src="/static/profile.jpeg" alt="Profile Image">
                     </Image> 
                 </Box>
             </Box>
@@ -34,11 +34,11 @@ const Page = () => {
                 Work
                 </Heading>
                 <Paragraph>
-                    I'm currently working at <NextLink href="https://www.comboware.ai/" passHref legacyBehavior><Link>Comboware</Link></NextLink> and <NextLink href="https://www.ulink.com.tw/" passHref legacyBehavior><Link>Ulink</Link></NextLink> as a part time software engineer
+                    I'm currently studying at <NextLink href="https://www.nycu.edu.tw/en/" passHref legacyBehavior><Link>NYCU</Link></NextLink> as a master student in Computer Science.
                 </Paragraph>
                 <Box aligin="center" my={4}>
                     <NextLink href="/works" passHref legacyBehavior>
-                        <Button rightIcon={<ChevronRightIcon/>} colorScheme="teal">
+                        <Button rightIcon={<ChevronRightIcon/>} colorScheme="blue">
                             My portfile
                         </Button>
                     </NextLink>
@@ -107,8 +107,8 @@ const Page = () => {
                 </Heading>
                 <BioSection>
                     <BioYear>2023</BioYear>
-                    Y. -Y. Chang, S. -T. Wong, E. O. Salawu, <span style={{fontWeight: "bold", color: "#ff63c3"}}>M. -H. Liao, </span> 
-                    J. -H. Hung and L. -W. Yang, "Full-Privacy Secured Search Engine Empowered by Efficient Genome-Mapping Algorithms," 
+                    Y. -Y. Chang, S. -T. Wong, E. O. Salawu, <span style={{fontWeight: "bold", color: "#ffbd59"}}>M. -H. Liao, </span> 
+                    J. -H. Hung and L. -W. Yang, "Full-Privacy Secured Search Engine Empowered by Efficient Genome-Mapping Algorithms,"  
                     in IEEE Journal of Biomedical and Health Informatics, vol. 27, no. 10, pp. 5155-5164, Oct. 2023,  doi: <NextLink href="https://ieeexplore.ieee.org/document/10198547" passHref legacyBehavior><Link>10.1109/JBHI.2023.3300885</Link></NextLink>
                 </BioSection>
             </Section>

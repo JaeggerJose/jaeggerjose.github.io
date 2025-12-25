@@ -4,9 +4,16 @@ import { mode } from '@chakra-ui/theme-tools'
 const style = {
     global: props => ({
         body: {
-            color: mode('#000', '#fff')(props),
-            bg: mode('#dfc9b2', '#8ba2a3')(props),
-            transition: '0.2s'
+            bg: mode('#f0e7db', '#202023')(props),
+            backgroundImage: mode(
+                'linear-gradient(to bottom, #f0e7db 0%, #fff1eb 100%)', // Light: Warm Sand / Summer Vibe
+                'linear-gradient(to bottom, #0f2027, #203a43, #2c5364)'  // Dark: Deep Night / Winter Vibe
+            )(props),
+            backgroundAttachment: 'fixed',
+            color: mode('#1a202c', '#f7fafc')(props), // Better contrast text colors
+            transition: '0.2s',
+            fontSize: '18px', // Increased base font size
+            lineHeight: '1.6' // Improved readability
         }
     })
 }
@@ -14,28 +21,30 @@ const style = {
 const components = {
     Heading: {
         variants: {
-            'secion-title': {
+            'section-title': {
                 textDecoration: 'underline',
-                fontSize: 20,
+                fontSize: 24, // Increased from 20
                 textUnderlineOffset: 6,
                 textDecorationThickness: 4,
                 marginTop: 3,
-                marginButtom: 4
+                marginBottom: 4,
+                textDecorationColor: '#525252'
             }
         }
     },
     Link: {
         baseStyle: props => ({
-            color: mode('#032f39s', '#ff63c3')(props),
+            color: mode('#3182ce', '#ffbd59')(props), // Blue (Light) / Orange (Dark)
             textUnderlineOffset: 3
         })
     }
 }
 const fonts = {
-    heading: "M PLUS Pounded 1c",
+    heading: "M PLUS Rounded 1c",
 }
 const colors = {
-    glassTeal: '#88ccca'
+    oceanBlue: '#3182ce',
+    sunOrange: '#ffbd59'
 }
 const config = {
     initialColorMode: 'light',

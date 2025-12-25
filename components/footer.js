@@ -1,13 +1,11 @@
-import styled from "@emotion/styled";
-
+import { Box } from '@chakra-ui/react'
 
 const Footer = () => {
-    return (
-        <Footer>
-            <p>Copyright 2025 JaggerJose. All rights reserved.</p>
-        </Footer>
-    )
+  return (
+    <Box align="center" opacity={0.4} fontSize="sm" mt={10}>
+      &copy; {new Date().getFullYear()} JaggerJose. All Rights Reserved.
+    </Box>
+  )
 }
 
-
-export default Footer;
+export default Footer

@@ -20,16 +20,18 @@ import ThemeToggleButton from './layouts/theme-toggle-button'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
     const active = path === href
-    const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+    const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+    const activeBg = useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')
     return (
         <Link
             as={NextLink}
             href={href}
             scroll={false}
             p={2}
-            bg={active ? 'grassTeal' : undefined}
-            color={active ? '#032f39' : inactiveColor}
+            bg={active ? activeBg : undefined}
+            color={active ? 'inherit' : inactiveColor}
             target={target}
+            borderRadius="lg"
             {...props}
         >
             {children}
@@ -43,8 +45,8 @@ const MenuLink = forwardRef((props, ref) => (
 const Navbar = (props) => {
     const { path } = props
     return (
-        <Box position="fixed" as="nav" w="100%" bg={useColorModeValue('#A5DD9B', '#20202380')} style={{ backdropFilter: 'blur(10px)' }} zIndex={1} {...props}>
-            <Container display="flex" p={2} maxW="container.md" wrap="wrap" align="center" justify="space-between">
+        <Box position="fixed" as="nav" w="100%" bg={useColorModeValue('rgba(255, 255, 255, 0.25)', '#20202380')} style={{ backdropFilter: 'blur(10px)' }} zIndex={1} {...props}>
+            <Container display="flex" p={2} maxW="container.xl" wrap="wrap" align="center" justify="space-between">
                 <Flex align="center" mr={5}>
                     <Heading as="h1" size="lg" letterSpacing={'tighter'}>
                        <Logo /> 
