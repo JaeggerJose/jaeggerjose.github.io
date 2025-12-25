@@ -1,39 +1,48 @@
 export const snowSpots = [
     {
-        id: 'niseko',
-        title: 'Niseko United (二世谷)',
-        lat: 42.8631,
-        lng: 140.7011,
-        date: '2024 Winter',
+        id: 'GALA',
+        title: 'GALA Yuzawa (GALA湯沢), Ishiuchi Maruyama(石打丸山), Yuzawakogen(湯沢高原)',
+        lat: 36.95084485424088,
+        lng: 138.79955770394355,
+        date: '2026 March',
+        desc: 'The largest ski resort in Japan. Excellent for all levels of snowboarders. The best time to go is in March when the snow is still fresh and the powder is perfect.',
+        image: '/static/gala.jpg' // Placeholder, replace with your photos
+    },
+    {
+        id: 'appi',
+        title: 'Appikogen (安比高原)',
+        lat: 40.004128792557644,
+        lng: 140.9709563190319,
+        date: '2025 December',
         desc: 'The powder heaven of Hokkaido. Deep snow, wide runs, and amazing off-piste areas.',
-        image: '/static/hotspring.jpg' // Placeholder, replace with your photos
+        image: '/static/appi.jpg' // Placeholder, replace with your photos
     },
     {
-        id: 'hakuba',
-        title: 'Hakuba Valley (白馬)',
-        lat: 36.6972,
-        lng: 137.8306,
-        date: '2023 Winter',
-        desc: 'Host of the 1998 Winter Olympics. Steep gradients and magnificent views of the Northern Alps.',
-        image: '/static/hotspring2.jpeg'
+        id: 'asari',
+        title: 'Asarigawa (朝里川)',
+        lat: 43.14365206522199,
+        lng: 141.03670371868628,
+        date: '2025 January',
+        desc: 'Small, but perfectly formed. Perfect for a day trip from Asari.',
+        image: '/static/asari.jpg'
     },
     {
-        id: 'gala-yuzawa',
-        title: 'GALA Yuzawa (GALA湯澤)',
-        lat: 36.9517,
-        lng: 138.8078,
-        date: '2022 Winter',
-        desc: 'Super convenient, directly connected to the Shinkansen station. Perfect for a day trip from Tokyo.',
-        image: '/static/beach.jpg'
+        id: 'shizukuishi',
+        title: 'Shizukuishi （雫石)',
+        lat: 39.773812743501,
+        lng: 140.924248675104,
+        date: '2024 December',
+        desc: 'Small, but perfectly formed. Perfect for a day trip from Shizukuishi.',
+        image: '/static/shizukuishi.jpg'
     },
     {
-        id: 'zao',
-        title: 'Zao Onsen (藏王溫泉)',
-        lat: 38.1637,
-        lng: 140.3957,
-        date: '2023 Winter',
-        desc: 'Famous for its "Snow Monsters" (Juhyo) and historic hot springs.',
-        image: '/static/hotspring.jpg'
+        id: 'kokusai',
+        title: 'Sapporo Kokusai(札幌國際)',
+        lat: 43.07235846825289,
+        lng: 141.08315801647032,
+        date: '2024 January',
+        desc: 'The largest ski resort in Hokkaido. Excellent for all levels of snowboarders.',
+        image: '/static/snowboarding.jpg'
     }
 ]
 
