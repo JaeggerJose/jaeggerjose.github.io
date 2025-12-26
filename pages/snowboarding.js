@@ -20,6 +20,7 @@ import { useState } from 'react'
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import { FaSnowboarding, FaMountain } from "react-icons/fa" 
 import { IoLocationSharp } from "react-icons/io5"
+import SnowfallEffect from "../components/snowfall-effect"
 
 // Dynamic import for the Map component
 const SnowMap = dynamic(() => import('../components/snow-map'), {
@@ -103,8 +104,10 @@ const Snowboarding = () => {
     const [activeSpot, setActiveSpot] = useState(null)
 
     return (
-        <Container maxW="container.xl" pt={10} px={{ base: 4, md: 8 }}>
-            <Section delay={0.1}>
+        <>
+            <SnowfallEffect particleCount={150} />
+            <Container maxW="container.xl" pt={10} px={{ base: 4, md: 8 }}>
+                <Section delay={0.1}>
                 <Flex align="end" mb={10} direction={{ base: "column", md: "row" }} gap={4}>
                     <Box>
                         <Heading 
@@ -170,6 +173,7 @@ const Snowboarding = () => {
                 </Box>
             </SimpleGrid>
         </Container>
+        </>
     )
 }
 
