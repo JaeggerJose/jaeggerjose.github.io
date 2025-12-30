@@ -65,7 +65,7 @@ const Page = () => {
                 </BioSection>
                 <BioSection>
                     <BioYear>2023</BioYear>
-                    Start at <NextLink href="https://aic.cgu.edu.tw/" passHref legacyBehavior><Link> CGU AI Center </Link></NextLink>as a part time software engineer
+                    Start at <NextLink href="https://www.cgu.edu.tw/aic" passHref legacyBehavior><Link> CGU AI Center </Link></NextLink>as a part time software engineer
                 </BioSection>    
                 <BioSection>
                     <BioYear>2024</BioYear>

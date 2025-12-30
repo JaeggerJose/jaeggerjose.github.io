@@ -29,9 +29,6 @@ const SnowMap = dynamic(() => import('../components/snow-map'), {
 })
 
 const SnowPost = ({ spot, isActive, onClick }) => {
-    // Designer Aesthetic: Material Design 3 / Apple-esque
-    // Soft shadows, rounded corners, subtle interactions
-    
     const cardBg = useColorModeValue('white', 'whiteAlpha.100')
     const activeBg = useColorModeValue('teal.50', 'whiteAlpha.200')
     const borderColor = useColorModeValue('gray.200', 'whiteAlpha.300')
