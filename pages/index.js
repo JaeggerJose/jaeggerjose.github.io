@@ -1,4 +1,4 @@
-import { Container, Box, Image,Heading, Link, useColorModeValue, Button } from "@chakra-ui/react"
+import { Container, Box, Image, Heading, Link, useColorModeValue, Button, Progress, HStack, Text } from "@chakra-ui/react"
 import NextLink from 'next/link'
 import Section from "../components/section"
 import Paragraph from "../components/paragraph" // import the paragraph component, which is a set styled p element
@@ -102,6 +102,84 @@ const Page = () => {
             </Section>
 
             <Section delay={0.4}>
+                <Heading as="h3" variant="section-title">
+                    Language Skills
+                </Heading>
+                
+                {/* Chinese - Native */}
+                <Box mb={4}>
+                    <HStack justify="space-between" mb={2}>
+                        <Text fontWeight="bold" fontSize="lg">
+                            🇹🇼 Chinese (Mandarin)
+                        </Text>
+                        <Text color={useColorModeValue('blue.600', 'orange.400')} fontWeight="semibold">
+                            Native
+                        </Text>
+                    </HStack>
+                    <Progress 
+                        value={100} 
+                        size="sm" 
+                        colorScheme={useColorModeValue('blue', 'orange')}
+                        borderRadius="full"
+                    />
+                </Box>
+
+                {/* English - Professional */}
+                <Box mb={4}>
+                    <HStack justify="space-between" mb={2}>
+                        <Text fontWeight="bold" fontSize="lg">
+                            🇬🇧 English
+                        </Text>
+                        <Text color={useColorModeValue('blue.600', 'orange.400')} fontWeight="semibold">
+                            B2 (IELTS 6.5)
+                        </Text>
+                    </HStack>
+                    <Progress 
+                        value={85} 
+                        size="sm" 
+                        colorScheme={useColorModeValue('blue', 'orange')}
+                        borderRadius="full"
+                    />
+                </Box>
+
+                {/* German - Elementary */}
+                <Box mb={4}>
+                    <HStack justify="space-between" mb={2}>
+                        <Text fontWeight="bold" fontSize="lg">
+                            🇩🇪 German
+                        </Text>
+                        <Text color={useColorModeValue('blue.600', 'orange.400')} fontWeight="semibold">
+                            B2 (TestDaF 3, 4, 3, 4)
+                        </Text>
+                    </HStack>
+                    <Progress 
+                        value={80} 
+                        size="sm" 
+                        colorScheme={useColorModeValue('blue', 'orange')}
+                        borderRadius="full"
+                    />
+                </Box>
+
+                {/* French - Intermediate */}
+                <Box mb={4}>
+                    <HStack justify="space-between" mb={2}>
+                        <Text fontWeight="bold" fontSize="lg">
+                            🇫🇷 French
+                        </Text>
+                        <Text color={useColorModeValue('blue.600', 'orange.400')} fontWeight="semibold">
+                            A1
+                        </Text>
+                    </HStack>
+                    <Progress 
+                        value={20} 
+                        size="sm" 
+                        colorScheme={useColorModeValue('blue', 'orange')}
+                        borderRadius="full"
+                    />
+                </Box>
+            </Section>
+
+            <Section delay={0.5}>
                 <Heading as="h3" variant="section-title">
                     Publications
                 </Heading>
