@@ -1,14 +1,10 @@
 {
   "id": 0,
-  "slug": "paris-exchange-life",
-  "title": "Exchange Student Life in Paris",
-  "excerpt": "My experience as an exchange student at Sorbonne Université. From language barriers to cultural adaptation, this journey has been full of growth and learning...",
-  "date": "2025-01-15",
-  "readTime": "5 min read",
-  "category": "Study Abroad",
-  "tags": ["exchange", "paris", "sorbonne", "france", "study-abroad"],
-  "thumbnail": "/images/posts/paris-exchange.jpg",
-  "featured": true,
+  "slug": "vol-0-website-development",
+  "title": "第0卷 — 網站開發",
+  "coverCaption": "封面拍攝於歐爹，上學期實驗室 SDN demo 後去吃宵夜。",
+  "date": "2026-02-08",
+  "thumbnail": "/images/posts/0.jpeg",
   "published": true,
-  "content": "## Coming to Paris\n\nWhen I first arrived at Charles de Gaulle Airport, everything felt surreal. The signs were in French, the announcements were in French, and I could barely understand a word. But that was exactly the challenge I had been looking for.\n\n## Life at Sorbonne Université\n\nStudying informatique at Sorbonne was a completely different experience from what I was used to in Taiwan. The teaching style, the way students interact with professors, and even the exam formats were all new to me.\n\n## Cultural Adaptation\n\nFrom learning to say \"Bonjour\" to everyone I meet, to understanding that lunch breaks are sacred, adapting to French culture was a journey in itself.\n\n## What I Learned\n\nThis exchange experience taught me that growth happens outside your comfort zone. Every struggle with the language, every moment of homesickness, and every new friendship made me a stronger and more open-minded person."
+  "content": "## 這週做了什麼\n\n**把個人網站從零重建了一遍**\n終於下定決心把舊的網站重構，從 Next.js 13 升到 16，React 19、Chakra UI v3 全部一起升級，過程雖然有curousr幫助但還是踩了不少坑。\n\n**加入了 Weekly Post 功能**\n參考了 [TW93 潮流週刊](https://weekly.tw93.fun/) 的形式，想要每週記錄一些生活和技術的東西，不用太正式，想到什麼寫什麼。\n\n## 隨便聊聊\n\n最近覺得寫東西這件事不需要等到「準備好」才開始，隨時輸出自己的想法才能知道自己目前的認知程度，反正是自己的網站，想改隨時都能改。\n\n第一篇就先這樣慢慢找到自己的節奏。"
 }

@@ -4,11 +4,7 @@
   "title": "Life as a Software Engineer",
   "excerpt": "Sharing my experiences working as a software engineer across different companies. From tech stack choices to team collaboration, and balancing work with continuous learning...",
   "date": "2024-11-10",
-  "readTime": "6 min read",
-  "category": "Tech",
-  "tags": ["software-engineering", "career", "tech", "work"],
   "thumbnail": "/images/posts/software-engineer.jpg",
-  "featured": false,
   "published": true,
   "content": "## My Journey into Software Engineering\n\nIt all started with a curiosity about how websites work. That curiosity led me to learn HTML, then CSS, then JavaScript, and before I knew it, I was building full-stack applications.\n\n## Working at Different Companies\n\nFrom Praexisio to CGU AI Center, and then to Comboware and Ulink, each company taught me something different. At Praexisio, I learned about product thinking. At the AI Center, I dove deep into research-oriented development.\n\n## Tech Stack Choices\n\nOne of the most interesting parts of being a software engineer is choosing the right tools for the job. React, Next.js, Python, Docker — each has its place.\n\n## Balancing Work and Learning\n\nThe tech industry moves fast. Staying relevant means continuous learning, but it's also important to maintain a healthy work-life balance. Surfing and snowboarding help me reset and come back to code with fresh eyes."
 }
