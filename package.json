@@ -28,8 +28,22 @@
     "react-tooltip": "^5.30.0"
   },
   "devDependencies": {
-    "eslint": "^8.48.0",
+    "eslint": "^9.0.0",
     "eslint-config-next": "^16.0.0",
     "prettier": "^3.0.2"
+  },
+  "overrides": {
+    "react-leaflet": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    },
+    "@react-leaflet/core": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    },
+    "react-simple-maps": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }
