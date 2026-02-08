@@ -1,13 +1,13 @@
-import { Box } from "@chakra-ui/react";
-import styled from "@emotion/styled";
+import { Box, chakra } from "@chakra-ui/react"
 
-export const BioSection = styled(Box) `
-    padding-left: 3.4em;
-    text-indent: -3.4em;
-`
+export const BioSection = (props) => (
+    <Box paddingLeft="3.4em" textIndent="-3.4em" mb={2} {...props} />
+)
 
-export const BioYear = styled.span`
-    font-weight: bold;
-    margin-right: 1em;
-    font-size: 1.1rem;
-`
+export const BioYear = chakra("span", {
+    base: {
+        fontWeight: "bold",
+        marginRight: "1em",
+        fontSize: "1.1rem",
+    }
+})

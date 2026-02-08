@@ -1,10 +1,11 @@
-import styled from "@emotion/styled";
+import { chakra } from "@chakra-ui/react"
 
-// set the p element with the style drunter
-const Paragraph = styled.p`
-    text-align: justify;
-    text-indent: 1em;
-    font-size: 1.1rem;
-`
+const Paragraph = chakra("p", {
+    base: {
+        textAlign: "justify",
+        textIndent: "1em",
+        fontSize: "1.1rem",
+    }
+})
 
 export default Paragraph

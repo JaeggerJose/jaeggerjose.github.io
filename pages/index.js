@@ -1,19 +1,28 @@
-import { Container, Box, Image, Heading, Link, useColorModeValue, Button, Progress, HStack, Text } from "@chakra-ui/react"
+import { Container, Box, Image, Heading, Link, Button, Text } from "@chakra-ui/react"
 import NextLink from 'next/link'
 import Section from "../components/section"
-import Paragraph from "../components/paragraph" // import the paragraph component, which is a set styled p element
-import { ChevronRightIcon } from "@chakra-ui/icons"
+import Paragraph from "../components/paragraph"
+import { LuChevronRight } from "react-icons/lu"
 import { BioSection, BioYear } from "../components/bio"
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { useColorModeValue } from "../components/ui/color-mode"
 
 const Page = () => {
     return (
-        <Container maxW="container.lg">
+        <Container maxW="breakpoint-lg">
             <GoogleAnalytics gaId="G-N0YQWYT632" />
-            <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.300', 'whiteAlpha.100')} backdropFilter="blur(10px)" p={3} mb={6} align="center" marginTop={4}>
+            <Box
+                borderRadius="lg"
+                bg={useColorModeValue('whiteAlpha.300', 'whiteAlpha.100')}
+                backdropFilter="blur(10px)"
+                p={3}
+                mb={6}
+                textAlign="center"
+                marginTop={4}
+            >
                 Hello, I&apos;m a full-stack developer in Taiwan!
             </Box>
-            <Box display={{md : 'flex'}}>
+            <Box display={{ md: 'flex' }}>
                 <Box flexGrow={1}>
                     <Heading as="h2" variant="page-title">
                         JaggerJose
@@ -22,30 +31,61 @@ const Page = () => {
                         <p>Software Engineer</p>
                     </span>
                 </Box>
-                <Box flexShrink={0} mt={{base: 4, md: 0}}
-                ml={{md: 6}} align='center'>
-                    <Image boxShadow="lg" maxWidth="150px" display="inline-block" borderRadius="full" src="/static/profile.jpeg" alt="Profile Image">
-                    </Image> 
+                <Box
+                    flexShrink={0}
+                    mt={{ base: 4, md: 0 }}
+                    ml={{ md: 6 }}
+                    textAlign="center"
+                >
+                    <Image
+                        boxShadow="lg"
+                        maxWidth="150px"
+                        display="inline-block"
+                        borderRadius="full"
+                        src="/static/profile.jpeg"
+                        alt="Profile Image"
+                    />
                 </Box>
             </Box>
 
             <Section delay={0.1}>
-                <Heading as="h3" variant="section-title">
-                Work
+                <Heading
+                    as="h3"
+                    textDecoration="underline"
+                    fontSize={24}
+                    textUnderlineOffset="6px"
+                    textDecorationThickness="4px"
+                    mt={3}
+                    mb={4}
+                    textDecorationColor="#525252"
+                >
+                    Work
                 </Heading>
                 <Paragraph>
-                    I'm currently studying at <NextLink href="https://www.nycu.edu.tw/en/" passHref legacyBehavior><Link>NYCU</Link></NextLink> as a master student in Computer Science.
+                    I&apos;m currently studying at{' '}
+                    <NextLink href="https://www.nycu.edu.tw/en/">NYCU</NextLink>
+                    {' '}as a master student in Computer Science.
                 </Paragraph>
-                <Box aligin="center" my={4}>
-                    <NextLink href="/works" passHref legacyBehavior>
-                        <Button rightIcon={<ChevronRightIcon/>} colorScheme="blue">
-                            My portfile
-                        </Button>
-                    </NextLink>
+                <Box my={4}>
+                    <Button colorPalette="blue" asChild>
+                        <NextLink href="/works">
+                            My portfolio <LuChevronRight />
+                        </NextLink>
+                    </Button>
                 </Box>
             </Section>
+
             <Section delay={0.2}>
-                <Heading as="h3" variant="section-title">
+                <Heading
+                    as="h3"
+                    textDecoration="underline"
+                    fontSize={24}
+                    textUnderlineOffset="6px"
+                    textDecorationThickness="4px"
+                    mt={3}
+                    mb={4}
+                    textDecorationColor="#525252"
+                >
                     Bio
                 </Heading>
                 <BioSection>
@@ -58,136 +98,129 @@ const Page = () => {
                 </BioSection>
                 <BioSection>
                     <BioYear>2022</BioYear>
-                    Start at 
-                    <NextLink href="https://praexisio.com.tw/" passHref legacyBehavior>
-                        <Link> Praexisio Taiwan Inc.</Link>
-                    </NextLink> as a part time product engineer
+                    Start at{' '}
+                    <NextLink href="https://praexisio.com.tw/">Praexisio Taiwan Inc.</NextLink>
+                    {' '}as a part time product engineer
                 </BioSection>
                 <BioSection>
                     <BioYear>2023</BioYear>
-                    Start at <NextLink href="https://www.cgu.edu.tw/aic" passHref legacyBehavior><Link> CGU AI Center </Link></NextLink>as a part time software engineer
-                </BioSection>    
+                    Start at{' '}
+                    <NextLink href="https://www.cgu.edu.tw/aic">CGU AI Center</NextLink>
+                    {' '}as a part time software engineer
+                </BioSection>
                 <BioSection>
                     <BioYear>2024</BioYear>
                     Got IELTS 6.5 in Taiwan, Taipei (R: 6.5, L: 6.5, W: 6.5, S: 7.0)
                 </BioSection>
                 <BioSection>
                     <BioYear>2024</BioYear>
-                    Start at <NextLink href="https://www.comboware.ai/" passHref legacyBehavior><Link>Comboware</Link></NextLink> and <NextLink href="https://www.ulink.com.tw/" passHref legacyBehavior><Link>Ulink</Link></NextLink> as a part time software engineer
+                    Start at{' '}
+                    <NextLink href="https://www.comboware.ai/">Comboware</NextLink>
+                    {' '}and{' '}
+                    <NextLink href="https://www.ulink.com.tw/">Ulink</NextLink>
+                    {' '}as a part time software engineer
                 </BioSection>
-
-                {/*once add a new bio insert a new Biosection at here under*/}
             </Section>
 
             <Section delay={0.3}>
-                <Heading as="h3" variant="section-title">
+                <Heading
+                    as="h3"
+                    textDecoration="underline"
+                    fontSize={24}
+                    textUnderlineOffset="6px"
+                    textDecorationThickness="4px"
+                    mt={3}
+                    mb={4}
+                    textDecorationColor="#525252"
+                >
                     Education
                 </Heading>
-                <Section>
+                <BioSection>
                     <BioYear>2025-</BioYear>
-                    Master of CS, <NextLink href="https://www.nycu.edu.tw/en/" passHref legacyBehavior><Link>National Yang Ming Chiao Tung University</Link></NextLink>, Hsinchu, Taiwan
-                </Section>
-                <Section>
+                    Master of CS,{' '}
+                    <NextLink href="https://www.nycu.edu.tw/en/">
+                        National Yang Ming Chiao Tung University
+                    </NextLink>
+                    , Hsinchu, Taiwan
+                </BioSection>
+                <BioSection>
                     <BioYear>2025</BioYear>
-                    Exchange student of informatique, <NextLink href="https://www.sorbonne-universite.fr/en" passHref legacyBehavior><Link>Sorbonne Université</Link></NextLink>, Paris, France
-                </Section>
-                <Section>
+                    Exchange student of informatique,{' '}
+                    <NextLink href="https://www.sorbonne-universite.fr/en">
+                        Sorbonne Université
+                    </NextLink>
+                    , Paris, France
+                </BioSection>
+                <BioSection>
                     <BioYear>2019-2025</BioYear>
-                    Bachelor of CSIE, <NextLink href="https://www.cgu.edu.tw/en/" passHref legacyBehavior><Link>Chang Gung University</Link></NextLink>, Taoyuan, Taiwan
-                </Section>
-                <Section>
+                    Bachelor of CSIE,{' '}
+                    <NextLink href="https://www.cgu.edu.tw/en/">Chang Gung University</NextLink>
+                    , Taoyuan, Taiwan
+                </BioSection>
+                <BioSection>
                     <BioYear>2016-2019</BioYear>
                     Senior High School, St. Viator Catholic High School, Taichung, Taiwan
-                </Section>
+                </BioSection>
             </Section>
 
             <Section delay={0.4}>
-                <Heading as="h3" variant="section-title">
+                <Heading
+                    as="h3"
+                    textDecoration="underline"
+                    fontSize={24}
+                    textUnderlineOffset="6px"
+                    textDecorationThickness="4px"
+                    mt={3}
+                    mb={4}
+                    textDecorationColor="#525252"
+                >
                     Language Skills
                 </Heading>
-                
-                {/* Chinese - Native */}
                 <Box mb={4}>
-                    <HStack justify="space-between" mb={2}>
-                        <Text fontWeight="bold" fontSize="lg">
-                            🇹🇼 Chinese (Mandarin)
-                        </Text>
-                        <Text color={useColorModeValue('blue.600', 'orange.400')} fontWeight="semibold">
-                            Native
-                        </Text>
-                    </HStack>
-                    <Progress 
-                        value={100} 
-                        size="sm" 
-                        colorScheme={useColorModeValue('blue', 'orange')}
-                        borderRadius="full"
-                    />
+                    <Text fontWeight="bold" fontSize="lg">
+                        🇹🇼 Chinese (Mandarin)
+                    </Text>
                 </Box>
-
-                {/* English - Professional */}
                 <Box mb={4}>
-                    <HStack justify="space-between" mb={2}>
-                        <Text fontWeight="bold" fontSize="lg">
-                            🇬🇧 English
-                        </Text>
-                        <Text color={useColorModeValue('blue.600', 'orange.400')} fontWeight="semibold">
-                            B2 (IELTS 6.5)
-                        </Text>
-                    </HStack>
-                    <Progress 
-                        value={85} 
-                        size="sm" 
-                        colorScheme={useColorModeValue('blue', 'orange')}
-                        borderRadius="full"
-                    />
+                    <Text fontWeight="bold" fontSize="lg">
+                        🇬🇧 English
+                    </Text>
                 </Box>
-
-                {/* German - Elementary */}
                 <Box mb={4}>
-                    <HStack justify="space-between" mb={2}>
-                        <Text fontWeight="bold" fontSize="lg">
-                            🇩🇪 German
-                        </Text>
-                        <Text color={useColorModeValue('blue.600', 'orange.400')} fontWeight="semibold">
-                            B2 (TestDaF 3, 4, 3, 4)
-                        </Text>
-                    </HStack>
-                    <Progress 
-                        value={80} 
-                        size="sm" 
-                        colorScheme={useColorModeValue('blue', 'orange')}
-                        borderRadius="full"
-                    />
+                    <Text fontWeight="bold" fontSize="lg">
+                        🇩🇪 German
+                    </Text>
                 </Box>
-
-                {/* French - Intermediate */}
                 <Box mb={4}>
-                    <HStack justify="space-between" mb={2}>
-                        <Text fontWeight="bold" fontSize="lg">
-                            🇫🇷 French
-                        </Text>
-                        <Text color={useColorModeValue('blue.600', 'orange.400')} fontWeight="semibold">
-                            A1
-                        </Text>
-                    </HStack>
-                    <Progress 
-                        value={20} 
-                        size="sm" 
-                        colorScheme={useColorModeValue('blue', 'orange')}
-                        borderRadius="full"
-                    />
+                    <Text fontWeight="bold" fontSize="lg">
+                        🇫🇷 French
+                    </Text>
                 </Box>
             </Section>
 
             <Section delay={0.5}>
-                <Heading as="h3" variant="section-title">
+                <Heading
+                    as="h3"
+                    textDecoration="underline"
+                    fontSize={24}
+                    textUnderlineOffset="6px"
+                    textDecorationThickness="4px"
+                    mt={3}
+                    mb={4}
+                    textDecorationColor="#525252"
+                >
                     Publications
                 </Heading>
                 <BioSection>
                     <BioYear>2023</BioYear>
-                    Y. -Y. Chang, S. -T. Wong, E. O. Salawu, <span style={{fontWeight: "bold", color: "#ffbd59"}}>M. -H. Liao, </span> 
-                    J. -H. Hung and L. -W. Yang, "Full-Privacy Secured Search Engine Empowered by Efficient Genome-Mapping Algorithms,"  
-                    in IEEE Journal of Biomedical and Health Informatics, vol. 27, no. 10, pp. 5155-5164, Oct. 2023,  doi: <NextLink href="https://ieeexplore.ieee.org/document/10198547" passHref legacyBehavior><Link>10.1109/JBHI.2023.3300885</Link></NextLink>
+                    Y. -Y. Chang, S. -T. Wong, E. O. Salawu,{' '}
+                    <span style={{ fontWeight: 'bold', color: '#ffbd59' }}>M. -H. Liao, </span>
+                    J. -H. Hung and L. -W. Yang, &quot;Full-Privacy Secured Search Engine Empowered
+                    by Efficient Genome-Mapping Algorithms,&quot; in IEEE Journal of Biomedical and
+                    Health Informatics, vol. 27, no. 10, pp. 5155-5164, Oct. 2023, doi:{' '}
+                    <NextLink href="https://ieeexplore.ieee.org/document/10198547">
+                        10.1109/JBHI.2023.3300885
+                    </NextLink>
                 </BioSection>
             </Section>
         </Container>

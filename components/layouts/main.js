@@ -8,11 +8,13 @@ const Main = ({ children, router }) => {
         <Box as="main" pb={8}>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <title> Ming-Hsaun Liao - Homepage</title>
+                <link rel="icon" href="/static/icon.png" type="image/png" />
+                <link rel="apple-touch-icon" href="/static/icon.png" />
+                <title>Ming-Hsuan Liao - Homepage</title>
             </Head>
 
             <Navbar path={router.asPath} />
-            <Container maxW="container.xl" pt={24}>
+            <Container maxW="breakpoint-xl" pt={24}>
                 {children}
                 <Footer />
             </Container>

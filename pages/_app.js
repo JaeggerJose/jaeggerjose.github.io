@@ -1,18 +1,17 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import Layout from "../components/layouts/main";
-import theme from "../libs/theme";
-import Fonts from "../components/layouts/font";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { Provider } from "../components/ui/provider"
+import Layout from "../components/layouts/main"
+import Fonts from "../components/layouts/font"
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 const Website = ({ Component, pageProps, router }) => {
     return (
-        <ChakraProvider theme={theme}>
-            <Fonts></Fonts>
+        <Provider>
+            <Fonts />
             <Layout router={router}>
-                <Component {...pageProps} key={router.router} />
+                <Component {...pageProps} key={router.route} />
             </Layout>
             <GoogleAnalytics gaId="G-N0YQWYT632" />
-        </ChakraProvider>
+        </Provider>
     )
 }
 export default Website
