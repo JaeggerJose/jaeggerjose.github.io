@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Container, Heading, Link, Text, VStack, HStack } from "@chakra-ui/react"
 import Section from "../components/section"
 import { LuMail, LuPhone } from "react-icons/lu"
@@ -8,6 +9,10 @@ const Contact = () => {
 
     return (
         <Container maxW="breakpoint-lg">
+            <Head>
+                <title>Contact | JaggerJose</title>
+                <meta name="description" content="Contact JaggerJose (Ming-Hsuan Liao) via email or phone." />
+            </Head>
             <Section delay={0.1}>
                 <Heading as="h3" fontSize={20} mb={4}>
                     Contact me
@@ -22,7 +27,7 @@ const Contact = () => {
                     </HStack>
                     <HStack gap={2}>
                         <LuPhone color={iconColor} />
-                        <Text>Phone: <Link href="tel:+886988888888">+886988888888</Link></Text>
+                        <Text>Phone: <Link href="tel:+886968926910">+886968926910</Link></Text>
                     </HStack>
                 </VStack>
             </Section>

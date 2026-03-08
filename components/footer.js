@@ -1,5 +1,7 @@
 import { Box, Flex, Text, HStack, Separator } from '@chakra-ui/react'
 import { LuMail, LuPhone, LuGithub } from 'react-icons/lu'
+import { IoLogoInstagram } from 'react-icons/io5'
+import { SiX } from 'react-icons/si'
 import { useColorModeValue } from './ui/color-mode'
 
 const Footer = () => {
@@ -31,7 +33,7 @@ const Footer = () => {
                         <Text>lms025187@gmail.com</Text>
                     </HStack>
                 </a>
-                <a href="tel:+886988888888" style={{ textDecoration: 'none' }}>
+                <a href="tel:+886968926910" style={{ textDecoration: 'none' }}>
                     <HStack
                         gap={2}
                         color={textColor}
@@ -41,7 +43,7 @@ const Footer = () => {
                         cursor="pointer"
                     >
                         <LuPhone size="16px" />
-                        <Text>+886 988 888 888</Text>
+                        <Text>+886 968 926 910</Text>
                     </HStack>
                 </a>
                 <a href="https://github.com/jaeggerjose" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
@@ -55,6 +57,32 @@ const Footer = () => {
                     >
                         <LuGithub size="16px" />
                         <Text>GitHub</Text>
+                    </HStack>
+                </a>
+                <a href="https://www.instagram.com/pretty_good_mate/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <HStack
+                        gap={2}
+                        color={textColor}
+                        fontSize="sm"
+                        transition="color 0.2s"
+                        _hover={{ color: hoverColor }}
+                        cursor="pointer"
+                    >
+                        <IoLogoInstagram size="16px" />
+                        <Text>Instagram</Text>
+                    </HStack>
+                </a>
+                <a href="https://x.com/kumivue67750" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <HStack
+                        gap={2}
+                        color={textColor}
+                        fontSize="sm"
+                        transition="color 0.2s"
+                        _hover={{ color: hoverColor }}
+                        cursor="pointer"
+                    >
+                        <SiX size="14px" />
+                        <Text>X</Text>
                     </HStack>
                 </a>
             </Flex>

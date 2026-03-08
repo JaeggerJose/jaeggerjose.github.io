@@ -1,16 +1,23 @@
+import Head from 'next/head'
 import { Container, Box, Image, Heading, Link, Button, Text } from "@chakra-ui/react"
 import NextLink from 'next/link'
 import Section from "../components/section"
+import SectionHeading from "../components/section-heading"
 import Paragraph from "../components/paragraph"
 import { LuChevronRight } from "react-icons/lu"
 import { BioSection, BioYear } from "../components/bio"
-import { GoogleAnalytics } from '@next/third-parties/google'
 import { useColorModeValue } from "../components/ui/color-mode"
 
 const Page = () => {
     return (
         <Container maxW="breakpoint-lg">
-            <GoogleAnalytics gaId="G-N0YQWYT632" />
+            <Head>
+                <title>JaggerJose | Ming-Hsuan Liao</title>
+                <meta name="description" content="JaggerJose (Ming-Hsuan Liao) — Full-stack developer in Taiwan. NYCU CS Master student. Personal portfolio and blog." />
+                <meta property="og:title" content="JaggerJose | Ming-Hsuan Liao" />
+                <meta property="og:description" content="Full-stack developer in Taiwan. NYCU CS Master student." />
+                <meta property="og:type" content="website" />
+            </Head>
             <Box
                 borderRadius="lg"
                 bg={useColorModeValue('whiteAlpha.300', 'whiteAlpha.100')}
@@ -27,9 +34,7 @@ const Page = () => {
                     <Heading as="h2" variant="page-title">
                         JaggerJose
                     </Heading>
-                    <span>
-                        <p>Software Engineer</p>
-                    </span>
+                    <Text>Software Engineer</Text>
                 </Box>
                 <Box
                     flexShrink={0}
@@ -49,18 +54,7 @@ const Page = () => {
             </Box>
 
             <Section delay={0.1}>
-                <Heading
-                    as="h3"
-                    textDecoration="underline"
-                    fontSize={24}
-                    textUnderlineOffset="6px"
-                    textDecorationThickness="4px"
-                    mt={3}
-                    mb={4}
-                    textDecorationColor="#525252"
-                >
-                    Work
-                </Heading>
+                <SectionHeading>Work</SectionHeading>
                 <Paragraph>
                     I&apos;m currently studying at{' '}
                     <NextLink href="https://www.nycu.edu.tw/en/">NYCU</NextLink>
@@ -76,18 +70,7 @@ const Page = () => {
             </Section>
 
             <Section delay={0.2}>
-                <Heading
-                    as="h3"
-                    textDecoration="underline"
-                    fontSize={24}
-                    textUnderlineOffset="6px"
-                    textDecorationThickness="4px"
-                    mt={3}
-                    mb={4}
-                    textDecorationColor="#525252"
-                >
-                    Bio
-                </Heading>
+                <SectionHeading>Bio</SectionHeading>
                 <BioSection>
                     <BioYear>2000</BioYear>
                     Born in Puli, Nantou, Taiwan
@@ -123,18 +106,7 @@ const Page = () => {
             </Section>
 
             <Section delay={0.3}>
-                <Heading
-                    as="h3"
-                    textDecoration="underline"
-                    fontSize={24}
-                    textUnderlineOffset="6px"
-                    textDecorationThickness="4px"
-                    mt={3}
-                    mb={4}
-                    textDecorationColor="#525252"
-                >
-                    Education
-                </Heading>
+                <SectionHeading>Education</SectionHeading>
                 <BioSection>
                     <BioYear>2025-</BioYear>
                     Master of CS,{' '}
@@ -164,18 +136,7 @@ const Page = () => {
             </Section>
 
             <Section delay={0.4}>
-                <Heading
-                    as="h3"
-                    textDecoration="underline"
-                    fontSize={24}
-                    textUnderlineOffset="6px"
-                    textDecorationThickness="4px"
-                    mt={3}
-                    mb={4}
-                    textDecorationColor="#525252"
-                >
-                    Language Skills
-                </Heading>
+                <SectionHeading>Language Skills</SectionHeading>
                 <Box mb={4}>
                     <Text fontWeight="bold" fontSize="lg">
                         🇹🇼 Chinese (Mandarin)
@@ -199,18 +160,7 @@ const Page = () => {
             </Section>
 
             <Section delay={0.5}>
-                <Heading
-                    as="h3"
-                    textDecoration="underline"
-                    fontSize={24}
-                    textUnderlineOffset="6px"
-                    textDecorationThickness="4px"
-                    mt={3}
-                    mb={4}
-                    textDecorationColor="#525252"
-                >
-                    Publications
-                </Heading>
+                <SectionHeading>Publications</SectionHeading>
                 <BioSection>
                     <BioYear>2023</BioYear>
                     Y. -Y. Chang, S. -T. Wong, E. O. Salawu,{' '}

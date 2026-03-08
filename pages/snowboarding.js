@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import {
     Container,
     Heading,
@@ -113,6 +114,10 @@ const Snowboarding = () => {
     return (
         <>
             <SnowfallEffect particleCount={150} />
+            <Head>
+                <title>Snow Tracks | JaggerJose</title>
+                <meta name="description" content="A curated collection of JaggerJose's snowboarding adventures across Japan." />
+            </Head>
             <Container maxW="breakpoint-xl" pt={10} px={{ base: 4, md: 8 }}>
                 <Section delay={0.1}>
                     <Flex align="end" mb={10} direction={{ base: "column", md: "row" }} gap={4}>

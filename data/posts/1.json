@@ -1,0 +1,10 @@
+{
+  "id": 1,
+  "slug": "vol-1-pve",
+  "title": "第1卷 — 架設PVE",
+  "coverCaption": "PVE WebUI介面",
+  "date": "2026-02-15",
+  "thumbnail": "/images/posts/1.jpeg",
+  "published": true,
+  "content": "## 這週做了什麼\n\n**首次嘗試從Ubuntu主機轉換成Proxmox VE**\n之前在寫SDN Final的時候就覺得Ubuntu+Virtual Box的配置超難用，這次在昱宏和Tim的幫助下成功投入PVE的懷抱，從PVE裡直接開VM超方便要管理也是。小缺點就是網路配置小麻煩，還好上學期末的SDN重新把網路知識補了一遍，也趁機看了一下邱牛的影片，讓之前大學沒學好的NAT、Iptables、Routing等知識都補了一遍。\n\n**Wireguard VPN**\n在PVE架設了Wireguard VPN，並讓Mac串到PVE的VPN Network剛開始在設定Wireguard的Config有點卡，還有碰到resolvef DNS的問題，但是修修改改後還是開始可以動了，而且用起來我覺得比Zerotier還順，只是上手設定還是靠PVE學到的網路知識。\n\n## 隨便聊聊\n\n這一周也開始我的滑雪前體能訓練，開始重新面對我一直以來的心魔**有氧運動**，慢慢進步從每天3km開始看看之後會去滑雪的體驗會不會有顯著的提升。"
+}

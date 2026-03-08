@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import fs from 'fs'
 import path from 'path'
 import {
@@ -38,7 +39,7 @@ const WeeklyPostCard = ({ title, coverCaption, date, slug, thumbnail, id }) => {
                     cursor="pointer"
                 >
                     {/* Cover Image */}
-                    <Box position="relative" overflow="hidden" h={{ base: '200px', md: '260px' }}>
+                    <Box position="relative" overflow="hidden" aspectRatio="16/9">
                         <Image
                             src={thumbnail || '/static/profile.jpeg'}
                             alt={title}
@@ -96,6 +97,10 @@ const Posts = ({ posts }) => {
 
     return (
         <Container maxW="breakpoint-md">
+            <Head>
+                <title>Weekly Journal | JaggerJose</title>
+                <meta name="description" content="JaggerJose 的每週日誌 — 記錄每週的生活、技術和想法。" />
+            </Head>
             {/* Header */}
             <Section delay={0.1}>
                 <Flex align="center" gap={3} mb={2} mt={4}>

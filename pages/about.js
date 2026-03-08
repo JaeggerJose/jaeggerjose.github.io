@@ -1,5 +1,7 @@
+import Head from 'next/head'
 import { Container, Separator, Heading, Text, Box, HStack, VStack } from "@chakra-ui/react"
 import Section from "../components/section"
+import SectionHeading from "../components/section-heading"
 import { LuStar } from "react-icons/lu"
 import NextLink from 'next/link'
 import { useColorModeValue } from "../components/ui/color-mode"
@@ -9,6 +11,10 @@ const About = () => {
 
     return (
         <Container>
+            <Head>
+                <title>About | JaggerJose</title>
+                <meta name="description" content="About JaggerJose (Ming-Hsuan Liao) — Hobbies, interests, and more." />
+            </Head>
             <Section delay={0.1}>
                 <Heading as="h3" mb={4} marginTop={4}>
                     About
@@ -20,18 +26,7 @@ const About = () => {
             </Section>
 
             <Section delay={0.2}>
-                <Heading
-                    as="h3"
-                    textDecoration="underline"
-                    fontSize={24}
-                    textUnderlineOffset="6px"
-                    textDecorationThickness="4px"
-                    mt={3}
-                    mb={4}
-                    textDecorationColor="#525252"
-                >
-                    Habits
-                </Heading>
+                <SectionHeading>Habits</SectionHeading>
                 <VStack align="stretch" gap={3}>
                     <HStack gap={2}>
                         <LuStar color={iconColor} />

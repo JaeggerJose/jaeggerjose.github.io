@@ -10,6 +10,8 @@ import {
     IconButton,
 } from '@chakra-ui/react'
 import { LuMenu } from 'react-icons/lu'
+import { IoLogoInstagram } from 'react-icons/io5'
+import { SiX } from 'react-icons/si'
 import { forwardRef } from 'react'
 import ThemeToggleButton from './layouts/theme-toggle-button'
 import { useColorModeValue } from './ui/color-mode'
@@ -77,6 +79,28 @@ const Navbar = (props) => {
                     <LinkItem href="/posts" path={path}>
                         Posts
                     </LinkItem>
+                    <LinkItem
+                        target="_blank"
+                        href="https://www.instagram.com/pretty_good_mate/"
+                        path={path}
+                        display="inline-flex"
+                        alignItems="center"
+                        gap={1}
+                        pl={2}
+                    >
+                        <IoLogoInstagram size={20} />
+                    </LinkItem>
+                    <LinkItem
+                        target="_blank"
+                        href="https://x.com/kumivue67750"
+                        path={path}
+                        display="inline-flex"
+                        alignItems="center"
+                        gap={1}
+                        pl={2}
+                    >
+                        <SiX size={16} />
+                    </LinkItem>
                 </Stack>
 
                 <Box flex={1} textAlign="right">
@@ -97,6 +121,16 @@ const Navbar = (props) => {
                                 </Menu.Item>
                                 <Menu.Item value="posts" asChild>
                                     <NextLink href="/posts">Posts</NextLink>
+                                </Menu.Item>
+                                <Menu.Item value="instagram" asChild>
+                                    <NextLink href="https://www.instagram.com/pretty_good_mate/" target="_blank">
+                                        <IoLogoInstagram /> Instagram
+                                    </NextLink>
+                                </Menu.Item>
+                                <Menu.Item value="x" asChild>
+                                    <NextLink href="https://x.com/kumivue67750" target="_blank">
+                                        <SiX /> X
+                                    </NextLink>
                                 </Menu.Item>
                             </Menu.Content>
                         </Menu.Root>

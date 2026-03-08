@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import Head from 'next/head'
 import {
     Container,
     Heading,
@@ -39,9 +40,12 @@ const renderInline = (text, linkColor, codeProps) => {
                     key={match.index}
                     src={match[2]}
                     alt={match[1] || ''}
-                    borderRadius="lg"
+                    borderRadius="xl"
                     my={4}
-                    maxW="100%"
+                    w="100%"
+                    aspectRatio="16/9"
+                    objectFit="cover"
+                    boxShadow="md"
                 />
             )
         } else if (match[3] !== undefined) {
@@ -156,7 +160,9 @@ const PostPage = ({ post }) => {
                                 src={imgMatch[2]}
                                 alt={imgMatch[1] || ''}
                                 borderRadius="xl"
-                                maxW="100%"
+                                w="100%"
+                                aspectRatio="16/9"
+                                objectFit="cover"
                                 mx="auto"
                                 boxShadow="md"
                             />
@@ -233,6 +239,13 @@ const PostPage = ({ post }) => {
 
     return (
         <Container maxW="breakpoint-md">
+            <Head>
+                <title>{`${post.title} | JaggerJose`}</title>
+                <meta name="description" content={post.coverCaption || post.title} />
+                <meta property="og:title" content={`${post.title} | JaggerJose`} />
+                <meta property="og:description" content={post.coverCaption || post.title} />
+                {post.thumbnail && <meta property="og:image" content={post.thumbnail} />}
+            </Head>
             {/* Back link */}
             <Section delay={0.05}>
                 <Link asChild color={metaColor} fontSize="sm" _hover={{ color: accentColor }}>
@@ -271,7 +284,7 @@ const PostPage = ({ post }) => {
                             src={post.thumbnail}
                             alt={post.title}
                             w="100%"
-                            h={{ base: '220px', md: '380px' }}
+                            aspectRatio="16/9"
                             objectFit="cover"
                         />
                     </Box>
